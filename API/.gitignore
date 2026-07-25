@@ -1,0 +1,8 @@
+docker/dist
+
+.gradle
+.idea
+
+domain/build
+userMicroservice/build
+teacherMicroservice/build

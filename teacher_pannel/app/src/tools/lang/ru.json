@@ -1,0 +1,24 @@
+{
+  "login": {
+    "title": "Вход",
+    "email": "Почта",
+    "password": "Пароль",
+    "button" : "Войти",
+    "forgot": "Забыли пароль?",
+    "signUp": "Регистрация",
+    "logout": "Выйти"
+  },
+  "courses": {
+    "createNew": "Создать новый курс",
+    "createdNew": "Курс создан",
+    "tableTitle": "Курсы",
+    "name": "Название курса",
+    "description": "Описание курса",
+    "create": {
+      "name": "Название курса",
+      "description": "Описание курса",
+      "submit": "Создать курс",
+      "hide": "Отмена"
+    }
+  }
+}

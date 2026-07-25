@@ -1,0 +1,93 @@
+= Exercise System
+
+== About project
+
+The goal of the project was implementing system for support user in learning math. The system provides close-ended questions (with one or multiple correct answers) and open-ended questions, where user have to give only correct answer. This repositorium consists of an *REST API* and *Teacher Panel* for adding new courses with exercises to the system. API was divided into _UserAPI_, which consists functions that should be available only for user that use outside application (e.g mobile app), and _TeacherAPI_ that offers functions for managing content (uses in _Teacher Panel_).
+
+
+=== Technology used
+API was developed using *Java* and *Spring-boot* framework. +
+Teacher Panel uses *Javascript* with *React*.
+
+== Running the project locally
+
+Only https://docs.docker.com/get-docker/[Docker Desktop] is required. Java, Gradle, Node.js, PostgreSQL, and npm run inside Docker containers.
+
+=== 1. Clone the repository
+
+[source,bash]
+----
+git clone <repository-url>
+cd ExercisesSystem
+----
+
+=== 2. Start Docker Desktop
+
+Open Docker Desktop and wait until the Docker Engine is running.
+
+=== 3. Start the complete application
+
+Run this command from the repository root:
+
+[source,bash]
+----
+docker compose up -d --build
+----
+
+The first launch takes longer because Docker downloads and builds all required images. This command starts:
+
+* PostgreSQL database
+* User API on `http://localhost:8125`
+* Teacher API on `http://localhost:8126`
+* Teacher Panel on `http://localhost:3000`
+
+=== 4. Open the application
+
+Open `http://localhost:3000` in a browser.
+
+Use the account included in the seed data:
+
+[source,text]
+----
+Email: u1@test.com
+Password: 123123123
+----
+
+=== Checking the containers
+
+[source,bash]
+----
+docker compose ps
+----
+
+To view logs:
+
+[source,bash]
+----
+docker compose logs -f
+----
+
+Press `Ctrl+C` to exit the log view. The application will keep running.
+
+=== Stopping and restarting
+
+Stop all services:
+
+[source,bash]
+----
+docker compose stop
+----
+
+Start them again:
+
+[source,bash]
+----
+docker compose start
+----
+
+Remove all application containers:
+
+[source,bash]
+----
+docker compose down
+----

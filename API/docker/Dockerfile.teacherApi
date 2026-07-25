@@ -1,0 +1,9 @@
+FROM gradle:7.2-jdk11 AS build
+
+WORKDIR /workspace
+COPY . .
+RUN gradle :teacherMicroservice:build -x test --no-daemon
+
+FROM eclipse-temurin:11-jre
+COPY --from=build /workspace/teacherMicroservice/build/libs/teacherMicroservice-1.0.jar /app.jar
+ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/app.jar"]

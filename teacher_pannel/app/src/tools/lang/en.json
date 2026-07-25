@@ -1,0 +1,24 @@
+{
+  "login": {
+    "title": "Enter",
+    "email": "Email",
+    "password": "Password",
+    "button" : "Login",
+    "forgot": "Forgot password?",
+    "signUp": "Register",
+    "logout": "Logout"
+  },
+  "courses": {
+    "createNew": "Create new course",
+    "createdNew": "Course was created",
+    "tableTitle": "Courses",
+    "name": "Course name",
+    "description": "Course description",
+    "create": {
+      "name": "Course name",
+      "description": "Course description",
+      "submit": "Create course",
+      "hide": "Cancel"
+    }
+  }
+}
